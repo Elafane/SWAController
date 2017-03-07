@@ -38,9 +38,7 @@ public class MonsterContract {
 
     private static final String TEXT_TYPE = "TEXT";
     private static final String INTEGER_TYPE = "INTEGER";
-    private static final String DATE_TYPE = "DATE";
     private static final String PRIMARY_KEY = "PRIMARY KEY";
-    private static final String AUTOINCREMENT = "AUTOINCREMENT";
     private static final String NOT_NULL = "NOT NULL";
     private static final String UNIQUE = "UNIQUE";
     private static final String COMMA_SEP = ",";
