@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.example.waractivitycontroller.R;
 import com.example.waractivitycontroller.view.controller.DrawerListAdapter;
 import com.example.waractivitycontroller.view.fragment.PlayerFragment;
+import com.example.waractivitycontroller.view.fragment.WarFragment;
 
 import java.util.ArrayList;
 
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new PlayerFragment();
                 break;
             case DRAWER_OPTION_WAR:
-                fragment = new PlayerFragment();
+                fragment = new WarFragment();
                 break;
             default:
                 fragment = new PlayerFragment();
