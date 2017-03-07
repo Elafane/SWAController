@@ -1,5 +1,6 @@
 package com.example.waractivitycontroller.model.persistence.contract;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
@@ -72,6 +73,21 @@ public class PlayerContract {
         }
         c.close();
         return result;
+    }
+
+    //</editor-fold>
+
+    //<editor-fold desc="Insert" defaultState="collapsed">
+
+    public static void insertPlayer(SQLiteDatabase db, Player player) {
+        ContentValues values = new ContentValues();
+        values.put(PlayerEntry.COLUMN_NAME,player.getName());
+        values.put(PlayerEntry.COLUMN_LEVEL,player.getLevel());
+        values.put(PlayerEntry.COLUMN_JOIN_YEAR,player.getYear());
+        values.put(PlayerEntry.COLUMN_JOIN_MONTH,player.getMonth());
+        values.put(PlayerEntry.COLUMN_JOIN_DAY,player.getDay());
+
+        db.insert(PlayerEntry.TABLE_NAME,null,values);
     }
 
     //</editor-fold>

@@ -1,5 +1,6 @@
 package com.example.waractivitycontroller.view.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
@@ -10,7 +11,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.waractivitycontroller.R;
 import com.example.waractivitycontroller.view.controller.DrawerListAdapter;
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
     //<editor-fold desc"Menu Options", defaultState="collapsed">
 
     public void onAddPlayer(MenuItem item) {
-        Toast.makeText(this, "onAddPlayer", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, AddPlayerActivity.class));
     }
 
     //</editor-fold>

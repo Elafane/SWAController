@@ -20,6 +20,7 @@ public class PlayerList extends ArrayList<Player> {
 
         this.addAll(PlayerContract.getPlayer(db));
 
+        helper.closeDatabase();
         return size();
     }
 }

@@ -32,17 +32,17 @@ public class PlayerListAdapter extends ArrayAdapter<Player>{
             convertView = context.getLayoutInflater().inflate(R.layout.list_single_player_item, parent, false);
         }
 
-        TextView nameText = (TextView) convertView.findViewById(R.id.list_single_drawerItem_drawerText);
-        TextView levelText = (TextView) convertView.findViewById(R.id.list_single_player_level);
-        TextView yearText = (TextView) convertView.findViewById(R.id.list_single_player_year);
-        TextView monthText = (TextView) convertView.findViewById(R.id.list_single_player_month);
-        TextView dayText = (TextView) convertView.findViewById(R.id.list_single_player_day);
-
-        nameText.setText(listItems.get(position).getName());
-        levelText.setText(String.valueOf(listItems.get(position).getLevel()));
-        yearText.setText(String.valueOf(listItems.get(position).getYear()));
-        monthText.setText(listItems.get(position).getMonthAsString());
-        dayText.setText(String.valueOf(listItems.get(position).getDay()));
+        TextView mNameText = (TextView) convertView.findViewById(R.id.list_single_drawerItem_drawerText);
+        TextView mLevelText = (TextView) convertView.findViewById(R.id.list_single_player_level);
+        TextView mYearText = (TextView) convertView.findViewById(R.id.list_single_player_year);
+        TextView mMonthText = (TextView) convertView.findViewById(R.id.list_single_player_month);
+        TextView mDayText = (TextView) convertView.findViewById(R.id.list_single_player_day);
+        
+        mNameText.setText(listItems.get(position).getName());
+        mLevelText.setText(String.valueOf(listItems.get(position).getLevel()));
+        mYearText.setText(String.valueOf(listItems.get(position).getYear()));
+        mMonthText.setText(listItems.get(position).getMonthAsString());
+        mDayText.setText(String.valueOf(listItems.get(position).getDay()));
 
         return convertView;
     }

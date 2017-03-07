@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">War Activity Control</string>
+
     <string name="navigation_drawer_open">open</string>
     <string name="navigation_drawer_close">close</string>
+
     <string name="menu_player_fragment_add_player">Add Player</string>
+
+    <string name="activity_add_player_name">Name</string>
+    <string name="activity_add_player_level">Level</string>
+    <string name="activity_add_player_year">yyyy</string>
+    <string name="activity_add_player_divider1">/</string>
+    <string name="activity_add_player_month">mm</string>
+    <string name="activity_add_player_divider2">/</string>
+    <string name="activity_add_player_day">dd</string>
+    <string name="activity_add_player_button">Add Player</string>
 </resources>

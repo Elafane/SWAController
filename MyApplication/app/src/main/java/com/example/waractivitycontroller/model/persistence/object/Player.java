@@ -14,8 +14,16 @@ public class Player {
     private int month;
     private int day;
 
-    public Player(long id, @NonNull String name,@NonNull int level, int year, int month, int day){
+    public Player(long id, @NonNull String name, int level, int year, int month, int day){
         this.id = id;
+        this.name = name;
+        this.level = level;
+        this.year = year;
+        this.month = month;
+        this.day = day;
+    }
+
+    public Player(@NonNull String name, int level, int year, int month, int day){
         this.name = name;
         this.level = level;
         this.year = year;
