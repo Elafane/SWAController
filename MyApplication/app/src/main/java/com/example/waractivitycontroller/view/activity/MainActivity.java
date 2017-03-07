@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
@@ -100,4 +101,12 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout.closeDrawer(mDrawerList);
 
     }
+
+    //<editor-fold desc"Menu Options", defaultState="collapsed">
+
+    public void onAddPlayer(MenuItem item) {
+    }
+
+    //</editor-fold>
+
 }
