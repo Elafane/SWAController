@@ -15,7 +15,9 @@ public class PlayerContract {
     private static class PlayerEntry implements BaseColumns{
         private static final String TABLE_NAME = "player";
         private static final String COLUMN_NAME = "name";
-        private static final String COLUMN_JOIN_DATE = "join";
+        private static final String COLUMN_JOIN_YEAR = "year";
+        private static final String COLUMN_JOIN_MONTH = "month";
+        private static final String COLUMN_JOIN_DAY = "day";
         private static final String COLUMN_LEVEL = "lvl";
     }
 
@@ -33,7 +35,9 @@ public class PlayerContract {
             "CREATE TABLE " + PlayerEntry.TABLE_NAME + "(" + SPACE +
                     PlayerEntry._ID + SPACE + INTEGER_TYPE + SPACE + PRIMARY_KEY + SPACE + AUTOINCREMENT + COMMA_SEP +
                     PlayerEntry.COLUMN_NAME + SPACE + TEXT_TYPE + SPACE + NOT_NULL + SPACE + UNIQUE + COMMA_SEP +
-                    PlayerEntry.COLUMN_JOIN_DATE + SPACE + DATE_TYPE + COMMA_SEP +
+                    PlayerEntry.COLUMN_JOIN_YEAR + SPACE + INTEGER_TYPE + COMMA_SEP +
+                    PlayerEntry.COLUMN_JOIN_MONTH + SPACE + INTEGER_TYPE + COMMA_SEP +
+                    PlayerEntry.COLUMN_JOIN_DAY + SPACE + INTEGER_TYPE + COMMA_SEP +
                     PlayerEntry.COLUMN_LEVEL + SPACE + INTEGER_TYPE + COMMA_SEP +
                     //Tabellen Einträge hier
                     SPACE + ")";
