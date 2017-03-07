@@ -1,50 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/list_single_player_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
-        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:id="@+id/list_single_player_name"/>
+        android:textSize="32sp" />
 
     <TextView
+        android:id="@+id/list_single_player_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/list_single_player_name"
         android:layout_toRightOf="@+id/list_single_player_name"
-        android:layout_alignParentTop="true"
-        android:id="@+id/list_single_player_level"/>
+        android:textSize="24sp" />
 
     <TextView
+        android:id="@+id/list_single_player_year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/list_single_player_name"
-        android:textSize="10sp"
-        android:id="@+id/list_single_player_year"/>
+        android:textSize="18sp" />
 
     <TextView
+        android:id="@+id/list_single_player_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/list_single_player_year"
-        android:layout_toEndOf="@+id/list_single_player_year"
         android:layout_below="@+id/list_single_player_name"
-        android:textSize="10sp"
-        android:id="@+id/list_single_player_month"/>
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/list_single_player_year"
+        android:layout_toRightOf="@+id/list_single_player_year"
+        android:textSize="18sp" />
 
     <TextView
+        android:id="@+id/list_single_player_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/list_single_player_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/list_single_player_month"
         android:layout_toRightOf="@+id/list_single_player_month"
-        android:layout_below="@+id/list_single_player_name"
-        android:textSize="10sp"
-        android:id="@+id/list_single_player_day"/>
+        android:textSize="18sp" />
 </RelativeLayout>

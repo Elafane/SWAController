@@ -32,12 +32,14 @@ public class PlayerListAdapter extends ArrayAdapter<Player>{
             convertView = context.getLayoutInflater().inflate(R.layout.list_single_player_item, parent, false);
         }
 
-        TextView mNameText = (TextView) convertView.findViewById(R.id.list_single_drawerItem_drawerText);
+        TextView mNameText = (TextView) convertView.findViewById(R.id.list_single_player_name);
         TextView mLevelText = (TextView) convertView.findViewById(R.id.list_single_player_level);
         TextView mYearText = (TextView) convertView.findViewById(R.id.list_single_player_year);
         TextView mMonthText = (TextView) convertView.findViewById(R.id.list_single_player_month);
         TextView mDayText = (TextView) convertView.findViewById(R.id.list_single_player_day);
-        
+
+        System.out.println(mNameText);
+
         mNameText.setText(listItems.get(position).getName());
         mLevelText.setText(String.valueOf(listItems.get(position).getLevel()));
         mYearText.setText(String.valueOf(listItems.get(position).getYear()));
