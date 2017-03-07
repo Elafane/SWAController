@@ -4,6 +4,10 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.waractivitycontroller.model.persistence.contract.GuildWarContract;
+import com.example.waractivitycontroller.model.persistence.contract.MonsterContract;
+import com.example.waractivitycontroller.model.persistence.contract.PlayerContract;
+
 /**
  * @author Oliver Rohr
  */
@@ -24,11 +28,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void callCreateQueries(SQLiteDatabase sqLiteDatabase) {
-
+        mDatabaseInstance.execSQL(PlayerContract.SQL_CREATE_ENTRIES);
+        mDatabaseInstance.execSQL(GuildWarContract.SQL_CREATE_ENTRIES);
+        mDatabaseInstance.execSQL(MonsterContract.SQL_CREATE_ENTRIES);
     }
 
     private void callDeleteQueries(SQLiteDatabase sqLiteDatabase) {
-
+        mDatabaseInstance.execSQL(PlayerContract.SQL_DROP_ENTRIES);
+        mDatabaseInstance.execSQL(GuildWarContract.SQL_DROP_ENTRIES);
+        mDatabaseInstance.execSQL(MonsterContract.SQL_DROP_ENTRIES);
     }
 
     @Override
