@@ -27,7 +27,7 @@ public class GuildWarContract {
 
     public static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + GuildWarEntry.TABLE_NAME + "(" + SPACE +
-                    GuildWarEntry._ID + SPACE + INTEGER_TYPE + SPACE + PRIMARY_KEY + SPACE + AUTOINCREMENT + COMMA_SEP +
+                    GuildWarEntry._ID + SPACE + INTEGER_TYPE + SPACE + PRIMARY_KEY + SPACE + AUTOINCREMENT +
                     //Tabellen einträge
                     SPACE + ")";
 

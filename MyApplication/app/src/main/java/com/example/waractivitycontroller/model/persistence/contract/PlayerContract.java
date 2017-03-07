@@ -1,6 +1,13 @@
 package com.example.waractivitycontroller.model.persistence.contract;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
+
+import com.example.waractivitycontroller.model.persistence.object.Player;
+
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * @author Oliver
@@ -38,10 +45,34 @@ public class PlayerContract {
                     PlayerEntry.COLUMN_JOIN_YEAR + SPACE + INTEGER_TYPE + COMMA_SEP +
                     PlayerEntry.COLUMN_JOIN_MONTH + SPACE + INTEGER_TYPE + COMMA_SEP +
                     PlayerEntry.COLUMN_JOIN_DAY + SPACE + INTEGER_TYPE + COMMA_SEP +
-                    PlayerEntry.COLUMN_LEVEL + SPACE + INTEGER_TYPE + COMMA_SEP +
-                    //Tabellen Einträge hier
+                    PlayerEntry.COLUMN_LEVEL + SPACE + INTEGER_TYPE +
                     SPACE + ")";
 
     public static final String SQL_DROP_ENTRIES =
             "DROP TABLE IF EXISTS " + PlayerEntry.TABLE_NAME;
+
+    private static final String SQL_SELECT_ENTRIES =
+            "SELECT * FROM " + PlayerEntry.TABLE_NAME;
+
+    //<editor-fold desc="Getter" defaultState="collapsed">
+
+    public static Collection<? extends Player> getPlayer(SQLiteDatabase db) {
+        ArrayList<Player> result = new ArrayList<>();
+
+        Cursor c = db.rawQuery(SQL_SELECT_ENTRIES, null);
+        while (c.moveToNext()){
+            result.add(new Player(
+                    c.getLong(c.getColumnIndexOrThrow(PlayerEntry._ID)),
+                    c.getString(c.getColumnIndexOrThrow(PlayerEntry.COLUMN_NAME)),
+                    c.getInt(c.getColumnIndexOrThrow(PlayerEntry.COLUMN_LEVEL)),
+                    c.getInt(c.getColumnIndexOrThrow(PlayerEntry.COLUMN_JOIN_YEAR)),
+                    c.getInt(c.getColumnIndexOrThrow(PlayerEntry.COLUMN_JOIN_MONTH)),
+                    c.getInt(c.getColumnIndexOrThrow(PlayerEntry.COLUMN_JOIN_DAY))
+            ));
+        }
+        c.close();
+        return result;
+    }
+
+    //</editor-fold>
 }

@@ -66,7 +66,7 @@ public class MonsterContract {
                     MonsterEntry.COLUMN_CRIRATE + SPACE + INTEGER_TYPE + COMMA_SEP +
                     MonsterEntry.COLUMN_CRIDMG + SPACE + INTEGER_TYPE + COMMA_SEP +
                     MonsterEntry.COLUMN_RES + SPACE + INTEGER_TYPE + COMMA_SEP +
-                    MonsterEntry.COLUMN_ACC + SPACE + INTEGER_TYPE + COMMA_SEP +
+                    MonsterEntry.COLUMN_ACC + SPACE + INTEGER_TYPE +
                     SPACE + ")";
 
     public static final String SQL_DROP_ENTRIES =

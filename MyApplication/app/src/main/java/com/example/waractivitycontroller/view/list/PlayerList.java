@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.waractivitycontroller.model.persistence.DatabaseHelper;
+import com.example.waractivitycontroller.model.persistence.contract.PlayerContract;
 import com.example.waractivitycontroller.model.persistence.object.Player;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class PlayerList extends ArrayList<Player> {
         DatabaseHelper helper = new DatabaseHelper(context);
         SQLiteDatabase db = helper.openDatabase();
 
-        // Get Entries from db and add to this list
+        this.addAll(PlayerContract.getPlayer(db));
 
         return size();
     }

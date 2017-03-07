@@ -28,15 +28,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void callCreateQueries(SQLiteDatabase sqLiteDatabase) {
-        mDatabaseInstance.execSQL(PlayerContract.SQL_CREATE_ENTRIES);
-        mDatabaseInstance.execSQL(GuildWarContract.SQL_CREATE_ENTRIES);
-        mDatabaseInstance.execSQL(MonsterContract.SQL_CREATE_ENTRIES);
+        sqLiteDatabase.execSQL(PlayerContract.SQL_CREATE_ENTRIES);
+        sqLiteDatabase.execSQL(GuildWarContract.SQL_CREATE_ENTRIES);
+        sqLiteDatabase.execSQL(MonsterContract.SQL_CREATE_ENTRIES);
     }
 
     private void callDeleteQueries(SQLiteDatabase sqLiteDatabase) {
-        mDatabaseInstance.execSQL(PlayerContract.SQL_DROP_ENTRIES);
-        mDatabaseInstance.execSQL(GuildWarContract.SQL_DROP_ENTRIES);
-        mDatabaseInstance.execSQL(MonsterContract.SQL_DROP_ENTRIES);
+        sqLiteDatabase.execSQL(PlayerContract.SQL_DROP_ENTRIES);
+        sqLiteDatabase.execSQL(GuildWarContract.SQL_DROP_ENTRIES);
+        sqLiteDatabase.execSQL(MonsterContract.SQL_DROP_ENTRIES);
     }
 
     @Override
