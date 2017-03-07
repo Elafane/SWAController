@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">War Activity Controller</string>
+    <string name="app_name">War Activity Control</string>
     <string name="navigation_drawer_open">open</string>
     <string name="navigation_drawer_close">close</string>
     <string name="menu_player_fragment_add_player">Add Player</string>

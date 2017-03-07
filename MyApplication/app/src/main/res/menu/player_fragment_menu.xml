@@ -6,6 +6,6 @@
         android:id="@+id/menu_player_fragment_add_player"
         android:onClick="onAddPlayer"
         android:title="@string/menu_player_fragment_add_player"
-        android:icon="@drawable/ic_person_add_black_24dp"
-        />
+        android:icon="@drawable/ic_person_add_white_24dp"
+        app:showAsAction="ifRoom"/>
 </menu>

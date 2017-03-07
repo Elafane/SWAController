@@ -14,7 +14,7 @@ import com.example.waractivitycontroller.R;
  * @author Oliver
  */
 
-public class PlayerFragment extends Fragment{
+public class PlayerFragment extends Fragment {
 
 
     @Override

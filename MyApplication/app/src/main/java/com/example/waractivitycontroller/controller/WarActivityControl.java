@@ -13,10 +13,10 @@ import com.example.waractivitycontroller.BuildConfig;
  * @author Oliver
  */
 
-public class WarActivityController extends Application {
+public class WarActivityControl extends Application {
 
     //static global values
-    public static WarActivityController sApplicationContext;
+    public static WarActivityControl sApplicationContext;
     public static SharedPreferences sSharedPreferences;
 
 
