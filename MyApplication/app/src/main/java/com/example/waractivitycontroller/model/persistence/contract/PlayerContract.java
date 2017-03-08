@@ -12,8 +12,8 @@ public class PlayerContract {
 
     }
 
-    private static class PlayerEntry implements BaseColumns{
-        private static final String TABLE_NAME = "player";
+    static class PlayerEntry implements BaseColumns{
+        static final String TABLE_NAME = "player";
         private static final String COLUMN_NAME = "name";
         private static final String COLUMN_JOIN_YEAR = "year";
         private static final String COLUMN_JOIN_MONTH = "month";
@@ -39,7 +39,6 @@ public class PlayerContract {
                     PlayerEntry.COLUMN_JOIN_MONTH + SPACE + INTEGER_TYPE + COMMA_SEP +
                     PlayerEntry.COLUMN_JOIN_DAY + SPACE + INTEGER_TYPE + COMMA_SEP +
                     PlayerEntry.COLUMN_LEVEL + SPACE + INTEGER_TYPE + COMMA_SEP +
-                    //Tabellen Einträge hier
                     SPACE + ")";
 
     public static final String SQL_DROP_ENTRIES =
