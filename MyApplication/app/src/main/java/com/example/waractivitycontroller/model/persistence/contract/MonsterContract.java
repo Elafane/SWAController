@@ -34,11 +34,14 @@ public class MonsterContract {
         private static final String COLUMN_CRIDMG = "cridmg";
         private static final String COLUMN_RES = "res";
         private static final String COLUMN_ACC = "acc";
+        private static final String COLUMN_OWNER = "owner";
     }
 
     private static final String TEXT_TYPE = "TEXT";
     private static final String INTEGER_TYPE = "INTEGER";
     private static final String PRIMARY_KEY = "PRIMARY KEY";
+    private static final String FOREIGN_KEY = "FOREIGN KEY";
+    private static final String REFERENCES = "REFERENCES";
     private static final String NOT_NULL = "NOT NULL";
     private static final String UNIQUE = "UNIQUE";
     private static final String COMMA_SEP = ",";
@@ -67,6 +70,9 @@ public class MonsterContract {
                     MonsterEntry.COLUMN_CRIDMG + SPACE + INTEGER_TYPE + COMMA_SEP +
                     MonsterEntry.COLUMN_RES + SPACE + INTEGER_TYPE + COMMA_SEP +
                     MonsterEntry.COLUMN_ACC + SPACE + INTEGER_TYPE +
+                    MonsterEntry.COLUMN_OWNER + SPACE + INTEGER_TYPE + COMMA_SEP +
+                    FOREIGN_KEY + SPACE + "(" + MonsterEntry.COLUMN_OWNER + ")" + SPACE + REFERENCES +
+                    SPACE + PlayerContract.PlayerEntry.TABLE_NAME + "(" + PlayerContract.PlayerEntry._ID + ")" +
                     SPACE + ")";
 
     public static final String SQL_DROP_ENTRIES =

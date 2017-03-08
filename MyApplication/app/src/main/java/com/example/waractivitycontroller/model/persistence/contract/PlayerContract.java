@@ -20,8 +20,8 @@ public class PlayerContract {
 
     }
 
-    private static class PlayerEntry implements BaseColumns{
-        private static final String TABLE_NAME = "player";
+    static class PlayerEntry implements BaseColumns{
+        static final String TABLE_NAME = "player";
         private static final String COLUMN_NAME = "name";
         private static final String COLUMN_JOIN_YEAR = "year";
         private static final String COLUMN_JOIN_MONTH = "month";
